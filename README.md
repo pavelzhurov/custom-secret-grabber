@@ -17,3 +17,12 @@ This grabber works according to the following schema and needs [conjur-k8s-authe
 7. The application uses secrets from emptyDir Secrets
 
 Currently, Python SDK (0.0.5) doesn't provide kubernetes native authentication, that's why we need to use conjur-k8s-authenticator aside.
+
+## Container settings
+Environment variables:
+- CONJUR_APPLIANCE_URL
+- CONJUR_SSL_CERTIFICATE_PATH
+- CONJUR_ACCOUNT
+- CONJUR_AUTHN_TOKEN_FILE – empty dir token
+- SECRETS_FILE - json dictionary which keys are Conjur variables, and values are paths, where secrets should be placed
+- FETCH_TIMEOUT – how often to grab secrets
