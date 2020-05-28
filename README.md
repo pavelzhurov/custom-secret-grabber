@@ -2,6 +2,9 @@
 
 This is the demo of custom secret grabber written with [Conjur Python 3 SDK](https://github.com/cyberark/conjur-api-python3).
 This grabber works according to the following schema and needs [conjur-k8s-authenticator](https://github.com/cyberark/conjur-authn-k8s-client) running aside.
+
+![schema](https://github.com/pavelzhurov/custom-secret-grabber/blob/master/images/CustomIntegration.png)
+
 1. Authenticator requests access to secrets:
     1. Sends a CSR with SAN containing pod and namespace
     2. Conjur generates a certificate and adds it to the particular pod in a particular namespace (indicated in CSR's SAN)
